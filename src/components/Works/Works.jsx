@@ -6,8 +6,8 @@ import IIIFViewer from '../IIIFViewer/IIIFViewer.jsx';   // Import the Viewer
 // Define the data constant outside the component (this is fine)
 const IMAGE_DATA = {
     img1: {
-        iiifUrl: 'https://ids.lib.harvard.edu/ids/iiif/43415174/info.json', // Note: IIIF viewers usually need a info.json link, but simple images might work depending on viewer config
-        liveUrl: 'https://i.imgur.com/dVfLY3s.jpeg',
+        iiifUrl: 'https://i.imgur.com/dVfLY3s.jpeg', // Note: IIIF viewers usually need a info.json link, but simple images might work depending on viewer config
+        liveUrl: 'https://github.com/jeffy-crypto/jefiece1.git',
         thumbnail: '/thumbnails/1.png', 
         tags: ["Art", "Illustration", "Sky", "Cloud", "Blue"], 
         colorPalette: ["#1c3a5e", "#8fb2d1", "#f0e7d5"]     

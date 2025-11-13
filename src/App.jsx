@@ -9,8 +9,9 @@ import Clients from './components/Clients/Clients';
 import Contact from './components/Contact/Contact';
 import Footer from './components/Footer/Footer';
 import ThemeToggle from './components/ThemeToggle/ThemeToggle';
-import Chatbot from './components/Chatbot/Chatbot';
 import ArtUploader from './components/ArtUploader/ArtUploader.jsx';
+import AdminTools from './components/AdminTools/AdminTools.jsx';
+import FloatingButtons from './components/FloatingButtons/FloatingButtons.jsx';
 import './index.css';
 
 
@@ -126,7 +127,10 @@ function App() {
           <Contact />
         </div>
       </main>
-
+      
+      <ArtUploader />
+      <AdminTools />
+      <FloatingButtons />
       <Footer />
 
       <label className="neumorphic-toggle-switch">
@@ -134,8 +138,7 @@ function App() {
         isDarkMode={isDarkMode} 
         onToggle={toggleTheme} 
       />
-      <Chatbot />
-      <ArtUploader />
+      
         {/* The rest of your toggle switch HTML (track, thumb, etc.) */}
       </label>
     </>

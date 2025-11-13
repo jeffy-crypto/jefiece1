@@ -1,39 +1,51 @@
-.uploader-container {
+/* src/components/ArtUploader/ArtUploader.css */
+.uploader-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1999; /* Below choice-modal but above most other things */
+    cursor: pointer;
+}
+
+.uploader-content {
+    cursor: default;
     max-width: 800px;
-    margin: 4rem auto;
+    width: 90%;
+    margin: 1rem;
     padding: 2rem;
     background-color: #2c2c2c;
     color: #fff;
     border-radius: 15px;
+    position: relative;
+    max-height: 90vh;
+    overflow-y: auto;
 }
-.input-group {
-    display: flex;
-    gap: 1rem;
-    margin: 1.5rem 0;
-}
-.input-group input {
-    flex-grow: 1;
-    padding: 0.75rem;
-    border-radius: 8px;
-    border: 1px solid #555;
-    background-color: #333;
-    color: #fff;
-    font-size: 1rem;
-}
-.input-group button {
-    padding: 0.75rem 1.5rem;
+
+.uploader-close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
     border: none;
-    border-radius: 8px;
-    background-color: #007bff;
-    color: #fff;
-    font-weight: bold;
+    color: #888;
+    font-size: 2rem;
     cursor: pointer;
+    transition: color 0.2s;
 }
-.results-container {
-    margin-top: 2rem;
-    padding-top: 2rem;
-    border-top: 1px solid #555;
+.uploader-close-btn:hover {
+    color: #fff;
 }
+
+.input-group { display: flex; gap: 1rem; margin: 1.5rem 0; }
+.input-group input { flex-grow: 1; padding: 0.75rem; border-radius: 8px; border: 1px solid #555; background-color: #333; color: #fff; font-size: 1rem; }
+.input-group button { padding: 0.75rem 1.5rem; border: none; border-radius: 8px; background-color: #007bff; color: #fff; font-weight: bold; cursor: pointer; }
+.results-container { margin-top: 2rem; padding-top: 2rem; border-top: 1px solid #555; }
 .result-section { margin-bottom: 2rem; }
 .tags-list { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1rem; }
 .tag { background-color: #555; padding: 0.25rem 0.75rem; border-radius: 15px; font-size: 0.9rem; }

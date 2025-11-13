@@ -24,11 +24,11 @@
     height: auto;
 }
 
-.header-buttons {
+.header-buttons .hire-btn{
     pointer-events: auto; /* Re-enable pointer events for the buttons */
 }
 
-.header-buttons button {
+.header-buttons .hire-btn {
     padding: 0.6rem 1.2rem;
     border: 2px solid rgb(255, 255, 255);
     border-radius: 20px;
