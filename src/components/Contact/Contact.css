@@ -1,0 +1,54 @@
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 10px;
+    background-color: #2a2a2a;
+    border: 1px solid #444;
+    color: #fff;
+}
+body.light-mode .contact-form input, body.light-mode .contact-form textarea {
+    background-color: #ebebeb;
+    border-color: #ccc;
+    color: #000;
+}
+.contact-form button {
+    padding: 1rem;
+    background-color: #ffffff;
+    color: #000000;
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+    cursor: none;
+    font-size: 1rem;
+    font-weight: 500;
+}
+body.light-mode .contact-form button {
+    background-color: #000000;
+    color: #ffffff;
+    border-color: #000;
+}
+.social-media-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem; /* Controls the space between icons */
+  margin-top: 2.5rem; /* Space between the form and the icons */
+}
+
+.social-media-links a {
+  color: #ffffff; /* Set a default color for the icons */
+  font-size: 2.5rem; /* Adjust the size of the icons */
+  text-decoration: none;
+  transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.social-media-links a:hover {
+  color: #cccccc; /* Change color on hover */
+  transform: scale(1.2); /* Make the icon slightly larger on hover */
+}

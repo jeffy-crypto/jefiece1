@@ -1,0 +1,57 @@
+header {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.nav-container {
+    padding: 0.8rem 2rem;
+    --glass-bg: rgb(0, 0, 0);
+    --glass-border: rgb(0, 0, 0);
+    border-radius: 50px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transition: background 0.3s;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 4rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #a9a9a9; /* A subtle hover effect */
+}
+
+/* Light Mode Styles */
+body.light-mode .nav-container {
+    --glass-bg: rgba(255, 255, 255, 0.5);
+    --glass-border: rgba(255, 255, 255, 0.1);
+}
+
+body.light-mode nav a {
+    color: #000000;
+}
+

@@ -1,0 +1,60 @@
+
+.review-slider-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.card-stage {
+    width: 400px;
+    height: 400px;
+    perspective: 1000px; /* The 3D perspective is now on this parent container */
+}
+
+/* --- Arrow Button Styles --- */
+.slider-arrow {
+    background-color: rgba(255, 255, 255, 0);
+    border: 1px solid rgba(255, 255, 255, 0);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    flex-shrink: 0;
+}
+.slider-arrow:hover {
+    background-color: rgba(255, 255, 255, 0);
+}
+.slider-arrow svg {
+    width: 24px;
+    height: 24px;
+    fill: #fff;
+}
+
+/* --- Light Mode Overrides --- */
+body.light-mode .slider-arrow {
+    background-color: rgba(0, 0, 0, 0);
+    border-color: rgba(0, 0, 0, 0);
+}
+body.light-mode .slider-arrow:hover {
+    background-color: rgba(0, 0, 0, 0);
+}
+body.light-mode .slider-arrow svg {
+    fill: #000;
+}
+
+/* --- Animation for the card entering --- */
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+/* This animation is now applied directly to the card wrapper, which is correct */
+.review-card-wrapper {
+    animation: fadeIn 0.6s ease-out forwards;
+}

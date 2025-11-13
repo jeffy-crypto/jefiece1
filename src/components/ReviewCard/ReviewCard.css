@@ -1,0 +1,41 @@
+.review-card-wrapper {
+    /* CHANGED: Set the size of the card directly on its wrapper */
+    width: 400px;
+    height: 100%;
+    border-radius: 10px; /* This is important for the 3D effect's appearance */
+    overflow: hidden; /* Contains the image when it scales on hover */
+    /* No background or border needed, the image will fill it */
+}
+
+/* Styles for when the review text is showing */
+.review-content {
+    padding: 2rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center the text vertically */
+    text-align: center;
+}
+
+.review-quote-text {
+    font-style: italic;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.review-author-text {
+    font-weight: bold;
+    font-size: 1rem;
+    color: #aaa;
+}
+
+/* Light Mode Overrides */
+body.light-mode .review-card-wrapper {
+    background-color: #f0f0f0;
+    border-color: #e0e0e0;
+}
+
+body.light-mode .review-author-text {
+    color: #555;
+}

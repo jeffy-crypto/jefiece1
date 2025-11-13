@@ -1,0 +1,61 @@
+/* src/components/TiltedCard/TiltedCard.css */
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+.tilted-card-figure {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    /* REMOVED: overflow: hidden; -- This was trapping the 3D effect */
+    /* REMOVED: perspective: 800px; -- This is now handled by the parent (.card-stage) */
+    animation: fadeIn 0.6s ease-out forwards;
+    
+    /* This is now the element that tilts in 3D space */
+    transform-style: preserve-3d;
+}
+
+/* We now apply the rotation and scale directly to the figure, not an inner div */
+.tilted-card-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Ensure image fills the figure */
+    height: 100%; /* Ensure image fills the figure */
+    object-fit: cover;
+    border-radius: 15px;
+    will-change: transform, filter;
+    transform: translateZ(0);
+    transition: filter 0.4s ease-in-out;
+}
+
+.tilted-card-figure:hover .tilted-card-img {
+    filter: blur(8px) brightness(0.7);
+}
+
+.tilted-card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 15px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    transform: translateZ(30px);
+    will-change: transform, opacity;
+}
+
+.tilted-card-figure:hover .tilted-card-overlay {
+    opacity: 1;
+}
+
+/* ... (the rest of the overlay text styles are fine) ... */

@@ -1,0 +1,53 @@
+.sub-header {
+    position: fixed;
+    top: 40px;
+    width: 100%;
+    padding: 0 4rem;
+    z-index: 99;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    pointer-events: none; /* Allows clicks to pass through the container itself */
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.logo {
+    pointer-events: auto; /* Re-enable pointer events for the logo */
+}
+
+.logo-img {
+    width: 150px;
+    max-width: 100%;
+    height: auto;
+}
+
+.header-buttons {
+    pointer-events: auto; /* Re-enable pointer events for the buttons */
+}
+
+.header-buttons button {
+    padding: 0.6rem 1.2rem;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 20px;
+    cursor: none; /* Using custom cursor */
+    font-weight: 800;
+    transition: all 0.3s;
+    font-size: 0.8rem;
+}
+
+.header-buttons .hire-btn {
+    background: #000000;
+    color: #ffffff;
+    margin-right: 0.5rem;
+}
+
+/* Light Mode Styles */
+body.light-mode .header-buttons .hire-btn {
+    background: #ffffff;
+    color: #000000;
+    border:2px solid rgb(0, 0, 0);
+}
+

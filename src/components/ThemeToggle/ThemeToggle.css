@@ -1,0 +1,96 @@
+/* src/components/ThemeToggle/ThemeToggle.css */
+
+.theme-toggle-container {
+    position: fixed;
+    bottom: 32px;
+    right: 15px;
+    z-index: 300;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    user-select: none;
+}
+
+.toggle-label {
+    font-weight: 500;
+    font-size: 0.9rem;
+    color: #888;
+    transition: color 0.3s ease;
+}
+
+/* The active label is white in dark mode */
+.toggle-label.active {
+    color: #fff;
+}
+
+/* The active label is black in light mode */
+body.light-mode .toggle-label.active {
+    color: #000;
+}
+
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The track of the slider */
+.toggle-track {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #171717; /* A slightly lighter track for dark mode */
+    border-radius: 34px;
+    transition: background-color 0.4s;
+}
+
+/* --- Default state (DARK MODE, unchecked) --- */
+.toggle-thumb {
+    position: absolute;
+    content: '';
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    border-radius: 50%;
+    
+    /* The transition now includes the new box-shadow property */
+    transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.4s ease, background-color 0.4s ease;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+
+    /* IMPROVED CRESCENT MOON */
+    background-color: transparent;
+    /* This shadow is larger and more offset, creating a thinner, more defined crescent */
+    box-shadow: inset 8px -5px 0 0 white; 
+}
+
+
+/* --- "Checked" state (LIGHT MODE) --- */
+
+/* Change the track color in light mode */
+input:checked + .toggle-track {
+    background-color: #eeeeee; /* A light gray track */
+}
+
+/* Move the thumb to the right */
+input:checked + .toggle-track .toggle-thumb {
+    transform: translateX(26px);
+
+    /* MORPH TO YELLOW SUN */
+    background-color: #facc15; /* A nice yellow for the sun */
+    box-shadow: none; /* Remove the inset shadow completely */
+}
